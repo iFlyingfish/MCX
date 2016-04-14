@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{C22E3CD9-E0A3-7840-79F4-883DEBA4CD64}") = "MinecraftX", "Assembly-CSharp.csproj", "{D53F0F12-8DE3-D127-A4A0-E646135A6AFC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D53F0F12-8DE3-D127-A4A0-E646135A6AFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D53F0F12-8DE3-D127-A4A0-E646135A6AFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D53F0F12-8DE3-D127-A4A0-E646135A6AFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D53F0F12-8DE3-D127-A4A0-E646135A6AFC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
