@@ -4,15 +4,10 @@ using System;
 
 public class World : MonoBehaviour
 {
-	public long getSeed()
+	public int getSeed()
 	{
 		return 0;
 	}
-}
-
-public class IChunkProvider : MonoBehaviour
-{
-
 }
 
 public class ChunkPrimer : MonoBehaviour
@@ -36,15 +31,16 @@ public class MapGenBase : MonoBehaviour {
 		int i = this.range;
 		this.worldObj = worldIn;
 		this.rand = new System.Random (worldIn.getSeed ());
-		long j = this.rand.Next ();
-		long k = this.rand.Next ();
+		int j = this.rand.Next ();
+		int k = this.rand.Next ();
 
 		for (int l = x - i; i <= x + i; ++l) 
 		{
 			for (int i1 = z - i; i1 <= z + i; ++i1) 
 			{
-				long j1 = (long)l * j;
-				long k1 = (long)i1 * k;
+				int j1 = l * j;
+				int k1 = i1 * k;
+
 				this.rand = new System.Random (j1 ^ k1 ^ worldIn.getSeed ());
 				this.recursiveGenerate (worldIn, l, i1, x, z, chunkPrimerIn);
 			}
