@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\MapGenBase.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

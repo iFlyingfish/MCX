@@ -82,5 +82,6 @@
 -define:UNITY_PRO_LICENSE
 'Assets/Script/MinecraftX/World/Chunk/IChunkProvider.cs'
 'Assets/Script/MinecraftX/World/Gen/MapGenBase.cs'
+'Assets/Script/MinecraftX/World/Gen/NewBehaviourScript.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'
