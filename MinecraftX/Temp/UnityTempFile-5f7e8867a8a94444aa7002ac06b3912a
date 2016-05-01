@@ -80,8 +80,15 @@
 -define:UNITY_EDITOR_OSX
 -define:UNITY_TEAM_LICENSE
 -define:UNITY_PRO_LICENSE
+'Assets/Script/MinecraftX/Block/Block.cs'
+'Assets/Script/MinecraftX/Init/Blocks.cs'
+'Assets/Script/MinecraftX/Util/ObjectIntIdentityMap.cs'
+'Assets/Script/MinecraftX/World/Biome/BiomeGenBase.cs'
+'Assets/Script/MinecraftX/World/Chunk/ChunkPrimer.cs'
 'Assets/Script/MinecraftX/World/Chunk/IChunkProvider.cs'
+'Assets/Script/MinecraftX/World/Gen/ChunkProviderFlat.cs'
 'Assets/Script/MinecraftX/World/Gen/MapGenBase.cs'
-'Assets/Script/MinecraftX/World/Gen/NewBehaviourScript.cs'
+'Assets/Script/MinecraftX/World/Gen/Structure/MapGenStructure.cs'
+'Assets/Script/MinecraftX/World/Gen/Structure/MapGenVillage.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

@@ -45,9 +45,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Script\MinecraftX\Block\Block.cs" />
+     <Compile Include="Assets\Script\MinecraftX\Init\Blocks.cs" />
+     <Compile Include="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenBase.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Biome\WorldChunkManager.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Chunk\ChunkPrimer.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\MapGenBase.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Gen\Structure\MapGenStructure.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Gen\Structure\MapGenVillage.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\IBlockAccess.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\World.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\WorldProvider.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
