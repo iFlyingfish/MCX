@@ -1,21 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
-
-public class World : MonoBehaviour
-{
-	public int getSeed()
-	{
-		return 0;
-	}
-}
-
-public class ChunkPrimer : MonoBehaviour
-{
-
-
-}
-
+	
 public class MapGenBase : MonoBehaviour {
 	/** The number of Chunks to gen-check in any given direction. */
 	protected int range = 8;

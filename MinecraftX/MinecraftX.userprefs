@@ -1,8 +1,14 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/MinecraftX/World/Gen/ChunkProviderFlat.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\MinecraftX\World\Chunk\Chunk.cs">
     <Files>
-      <File FileName="Assets/Script/MinecraftX/World/Gen/ChunkProviderFlat.cs" Line="316" Column="2" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\MapGenBase.cs" Line="5" Column="1" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" Line="157" Column="26" />
+      <File FileName="Assets\Script\MinecraftX\World\Chunk\ChunkPrimer.cs" Line="17" Column="4" />
+      <File FileName="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" Line="3" Column="34" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\Structure\MapGenStructure.cs" Line="7" Column="2" />
+      <File FileName="Assets\Script\MinecraftX\World\Chunk\Chunk.cs" Line="12" Column="1" />
+      <File FileName="Assets\Script\MinecraftX\World\World.cs" Line="4" Column="36" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

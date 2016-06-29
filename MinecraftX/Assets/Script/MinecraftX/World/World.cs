@@ -10,4 +10,9 @@ public class World : IBlockAccess {
 	{
 		return this.provider.getWorldChunkManager();
 	}
+
+	public int getSeed()
+	{
+		return 0;
+	}
 }

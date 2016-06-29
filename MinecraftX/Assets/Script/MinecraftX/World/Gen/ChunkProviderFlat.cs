@@ -9,8 +9,10 @@ public interface IBlockState
 
 public class FlatGeneratorInfo
 {
-
-	public Dictionary<string, Dictionary<string, string>> getWorldFeatures ();
+	public Dictionary<string, Dictionary<string, string>> getWorldFeatures ()
+	{
+		return null;
+	}
 }
 
 
@@ -32,10 +34,10 @@ public class ChunkProviderFlat : IChunkProvider {
 	private WorldGenLakes waterLakeGenerator;
 	private WorldGenLakes lavaLakeGenerator;
 
-	public ChunkProviderFlat(World worldIn, long seed, bool generateStructures, string flatGeneratorSettings)
+	public ChunkProviderFlat(World worldIn, int seed, bool generateStructures, string flatGeneratorSettings)
 	{
 		this.worldObj = worldIn;
-		this.random = new Random(seed);
+		this.random = new System.Random(seed);
 //		this.flatWorldGenInfo = FlatGeneratorInfo.createFlatGeneratorFromString(flatGeneratorSettings);
 
 		if (generateStructures)
@@ -72,7 +74,7 @@ public class ChunkProviderFlat : IChunkProvider {
 //					this.structureGenerators.add(new StructureOceanMonument((Map)map.get("oceanmonument")));
 //				}
 
-				this.structureGenerators.add(new MapGenVillage(map1));
+				this.structureGenerators.Add(new MapGenVillage(map1));
 			}
 				
 		}
