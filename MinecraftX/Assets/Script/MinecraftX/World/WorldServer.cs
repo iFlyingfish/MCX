@@ -30,5 +30,15 @@ public class WorldServer : World {
 	{
 
 	}
+
+	protected void updateBlocks()
+	{
+
+	}
+
+	public void tick()
+	{
+
+	}
 		
 }

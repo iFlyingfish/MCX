@@ -14,4 +14,14 @@ public class IntegratedServer {
 	{
 
 	}
+
+	public void updateTimeLightAndEntities()
+	{
+
+	}
+
+	public void tick()
+	{
+
+	}
 }
