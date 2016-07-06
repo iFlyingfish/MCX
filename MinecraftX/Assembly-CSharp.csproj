@@ -50,6 +50,8 @@
      <Compile Include="Assets\Script\MinecraftX\Init\Blocks.cs" />
      <Compile Include="Assets\Script\MinecraftX\Server\Integrated\IntegratedServer.cs" />
      <Compile Include="Assets\Script\MinecraftX\Server\Management\PlayerManager.cs" />
+     <Compile Include="Assets\Script\MinecraftX\Server\MinecraftServer.cs" />
+     <Compile Include="Assets\Script\MinecraftX\Util\BlockPos.cs" />
      <Compile Include="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenBase.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\WorldChunkManager.cs" />

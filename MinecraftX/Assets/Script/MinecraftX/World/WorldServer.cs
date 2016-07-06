@@ -3,6 +3,7 @@ using System.Collections;
 
 public class WorldServer : World {
 
+	public ChunkProviderServer theChunkProviderServer;
 
 	public WorldServer()
 	{
@@ -37,6 +38,14 @@ public class WorldServer : World {
 	}
 
 	public void tick()
+	{
+
+	}
+
+	/**
+     * Gets the spawn point in the world
+     */
+	public BlockPos getSpawnPoint()
 	{
 
 	}

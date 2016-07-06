@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class IntegratedServer {
+public class IntegratedServer : MinecraftServer {
 
 	public WorldServer[] worldServers;
 
