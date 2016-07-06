@@ -1,7 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class ChunkProviderServer : IChunkProvider {
+
+
+	private Dictionary<long,Chunk> id2ChunkDic = new Dictionary<long,Chunk> ();
+	private List<Chunk> loadedChunks = new List<Chunk> ();
+	private WorldServer worldObj;
 
 	/**
      * chunk generator object. Calls to load nonexistent chunks are forwarded to this object.
@@ -36,6 +42,23 @@ public class ChunkProviderServer : IChunkProvider {
      */
 	public Chunk loadChunk(int x, int z)
 	{
-		
+		long chunkID = ChunkCoordIntPair.chunkXZ2Int (x, z);
+		Chunk chunk = (Chunk)id2ChunkDic [chunkID];
+
+		if (chunk == null) {
+
+			if (serverChunkGenerator == null) {
+
+			} else {
+				chunk = serverChunkGenerator.provideChunk (x, z);
+			}
+		}
+
+		id2ChunkDic.Add (chunkID, chunk);
+		loadedChunks.Add (chunk);
+		chunk.onChunkLoad ();
+		chunk.populateChunk (this, this, x, z);
+
+		return chunk;
 	}
 }
