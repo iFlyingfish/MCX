@@ -7,8 +7,8 @@ public class WorldServer : World {
 
 	public WorldServer()
 	{
-
-
+		World(WorldProvider.getProviderForDimension());
+		chunkProvider = createChunkProvider ();
 	}
 
 	public void initialize()
@@ -29,7 +29,8 @@ public class WorldServer : World {
      */
 	protected IChunkProvider createChunkProvider()
 	{
-
+		theChunkProviderServer = new ChunkProviderServer (this, provider.createChunkGenerator ());
+		return theChunkProviderServer;
 	}
 
 	protected void updateBlocks()

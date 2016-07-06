@@ -16,7 +16,8 @@ public class ChunkProviderServer : IChunkProvider {
 
 	public ChunkProviderServer(WorldServer worldServer, IChunkProvider chunkProvider)
 	{
-
+		worldObj = worldServer;
+		serverChunkGenerator = chunkProvider;
 	}
 
 	/**

@@ -9,6 +9,11 @@ public class World : IBlockAccess {
 	/** Handles chunk operations and caching */
 	protected IChunkProvider chunkProvider;
 
+	protected World(WorldProvider providerIn)
+	{
+		provider = providerIn;
+	}
+
 	public WorldChunkManager getWorldChunkManager()
 	{
 		return this.provider.getWorldChunkManager();

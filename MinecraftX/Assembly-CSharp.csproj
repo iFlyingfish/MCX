@@ -68,7 +68,9 @@
      <Compile Include="Assets\Script\MinecraftX\World\IBlockAccess.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\World.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\WorldProvider.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\WorldProviderSurface.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\WorldServer.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\WorldType.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>G:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
