@@ -16,15 +16,15 @@ public class WorldType {
 	/** The int version of the ChunkProvider that generated this world. */
 	private readonly int generatorVersion;
 
-	private WorldType(int id, string name)
+	private WorldType(int id, string name) : this(id, name, 0)
 	{
-		WorldType (id, name, 0);
+		
 	}
 
 	private WorldType(int id, string name, int version)
 	{
 		worldType = name;
 		generatorVersion = version;
-		worldType = id;
+		worldTypeID = id;
 	}
 }

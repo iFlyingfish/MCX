@@ -8,13 +8,13 @@ public class IntegratedServer : MinecraftServer {
 	/**
      * Initialises the server and starts it.
      */
-	protected bool startServer()
+    override protected bool startServer()
 	{
 		loadAllWorlds ();
 		return true;
 	}
 
-	protected void loadAllWorlds()
+	override protected void loadAllWorlds()
 	{
 		worldServers = new WorldServer[1];
 		worldServers [0] = new WorldServer ();
@@ -29,7 +29,7 @@ public class IntegratedServer : MinecraftServer {
 	/**
      * Main function called by run() every loop.
      */
-	public void tick()
+	override public void tick()
 	{
 		base.tick ();
 		foreach (WorldServer worldserver in worldServers)

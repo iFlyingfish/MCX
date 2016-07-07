@@ -230,20 +230,28 @@ public class ChunkProviderFlat : IChunkProvider {
 //			biomegenbase.decorate(this.worldObj, this.random, blockpos);
 //		}
 //	}
-//
-//	public boolean func_177460_a(IChunkProvider p_177460_1_, Chunk p_177460_2_, int p_177460_3_, int p_177460_4_)
-//	{
-//		return false;
-//	}
-//
-//	/**
-//     * Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.
-//     * Return true if all chunks have been saved.
-//     */
-//	public boolean saveChunks(boolean p_73151_1_, IProgressUpdate progressCallback)
-//	{
-//		return true;
-//	}
+    
+	/**
+	   * Populates chunk with ores etc etc
+	   */
+	public void populate(IChunkProvider p_73153_1_, int p_73153_2_, int p_73153_3_)
+	{
+
+	}
+
+	public bool func_177460_a(IChunkProvider p_177460_1_, Chunk p_177460_2_, int p_177460_3_, int p_177460_4_)
+	{
+		return false;
+	}
+
+	/**
+     * Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.
+     * Return true if all chunks have been saved.
+     */
+	public bool saveChunks(bool p_73151_1_, IProgressUpdate progressCallback)
+	{
+		return true;
+	}
 //
 //	/**
 //     * Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently
@@ -253,29 +261,29 @@ public class ChunkProviderFlat : IChunkProvider {
 //	{
 //	}
 //
-//	/**
-//     * Unloads chunks that are marked to be unloaded. This is not guaranteed to unload every such chunk.
-//     */
-//	public boolean unloadQueuedChunks()
-//	{
-//		return false;
-//	}
-//
-//	/**
-//     * Returns if the IChunkProvider supports saving.
-//     */
-//	public boolean canSave()
-//	{
-//		return true;
-//	}
-//
-//	/**
-//     * Converts the instance data to a readable string.
-//     */
-//	public String makeString()
-//	{
-//		return "FlatLevelSource";
-//	}
+	/**
+     * Unloads chunks that are marked to be unloaded. This is not guaranteed to unload every such chunk.
+     */
+	public bool unloadQueuedChunks()
+	{
+		return false;
+	}
+
+	/**
+     * Returns if the IChunkProvider supports saving.
+     */
+	public bool canSave()
+	{
+		return true;
+	}
+
+	/**
+     * Converts the instance data to a readable string.
+     */
+	public string makeString()
+	{
+		return "FlatLevelSource";
+	}
 //
 //	public List<BiomeGenBase.SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos)
 //	{
@@ -304,17 +312,17 @@ public class ChunkProviderFlat : IChunkProvider {
 //		return 0;
 //	}
 //
-//	public void recreateStructures(Chunk p_180514_1_, int p_180514_2_, int p_180514_3_)
-//	{
-//		for (MapGenStructure mapgenstructure : this.structureGenerators)
-//		{
-//			mapgenstructure.generate(this, this.worldObj, p_180514_2_, p_180514_3_, (ChunkPrimer)null);
-//		}
-//	}
-//
-//	public Chunk provideChunk(BlockPos blockPosIn)
-//	{
-//		return this.provideChunk(blockPosIn.getX() >> 4, blockPosIn.getZ() >> 4);
-//	}
+	public void recreateStructures(Chunk p_180514_1_, int p_180514_2_, int p_180514_3_)
+	{
+		foreach (MapGenStructure mapgenstructure in structureGenerators)
+		{
+			mapgenstructure.generate(this, worldObj, p_180514_2_, p_180514_3_, (ChunkPrimer)null);
+		}
+	}
+
+	public Chunk provideChunk(BlockPos blockPosIn)
+	{
+		return provideChunk(blockPosIn.x >> 4, blockPosIn.z >> 4);
+	}
 
 }

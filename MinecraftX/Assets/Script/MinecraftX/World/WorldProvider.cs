@@ -33,6 +33,6 @@ public abstract class WorldProvider {
      */
 	public IChunkProvider createChunkGenerator()
 	{
-		return (IChunkProvider)(terrainType == WorldType.FLAT ? new ChunkProviderFlat(worldObj, 0, true, "") : (terrainType == WorldType.DEFAULT ? new ChunkProviderGenerate(worldObj, 0, true, "") : new ChunkProviderGenerate(worldObj, 0, true, ""));
+		return (IChunkProvider)(terrainType == WorldType.FLAT ? new ChunkProviderFlat(worldObj, 0, true, "") : (terrainType == WorldType.DEFAULT ? new ChunkProviderGenerate(worldObj, 0, true, "") : new ChunkProviderGenerate(worldObj, 0, true, "")));
 	}
 }

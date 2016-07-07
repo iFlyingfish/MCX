@@ -1,29 +1,33 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\MinecraftX\World\Gen\ChunkProviderGenerate.cs">
     <Files>
-      <File FileName="Assets\Script\MinecraftX\World\WorldProviderSurface.cs" Line="10" Column="22" />
-      <File FileName="Assets\Script\MinecraftX\Server\MinecraftServer.cs" Line="52" Column="49" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderGenerate.cs" Line="85" Column="3" />
+      <File FileName="Assets\Script\MinecraftX\World\WorldProviderSurface.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MinecraftX\Server\MinecraftServer.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\Server\Management\PlayerManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\World\Biome\WorldChunkManager.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\World\Gen\MapGenBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderGenerate.cs" Line="6" Column="2" />
       <File FileName="Assets\Script\MinecraftX\World\Chunk\ChunkPrimer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\World\Gen\Structure\MapGenStructure.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\World\Chunk\Chunk.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\WorldProvider.cs" Line="15" Column="55" />
+      <File FileName="Assets\Script\MinecraftX\World\WorldProvider.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\Init\Blocks.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\Block\Block.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\Block\BlockGrass.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderServer.cs" Line="54" Column="46" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderServer.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\Util\BlockPos.cs" Line="1" Column="1" />
       <File FileName="Assets\Script\MinecraftX\World\WorldType.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\World.cs" Line="14" Column="25" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" Line="37" Column="2" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\Server\Integrated\IntegratedServer.cs" Line="21" Column="24" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\World\WorldServer.cs" Line="12" Column="3" NotebookId="1" />
+      <File FileName="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MinecraftX\World\Biome\BiomeGenBase.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\Structure\MapGenVillage.cs" Line="1" Column="1" />
+      <File FileName="Assets\Script\MinecraftX\World\World.cs" Line="3" Column="1" NotebookId="1" />
+      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\Script\MinecraftX\Server\Integrated\IntegratedServer.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\Script\MinecraftX\World\WorldServer.cs" Line="1" Column="1" NotebookId="1" />
       <File FileName="Assets\Script\MinecraftX\World\ChunkCoordIntPair.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\Script\MinecraftX\World\IBlockAccess.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

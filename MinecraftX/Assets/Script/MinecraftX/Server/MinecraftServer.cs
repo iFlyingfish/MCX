@@ -2,7 +2,7 @@
 using System.Collections;
 using System;
 
-public class MinecraftServer {
+public abstract class MinecraftServer {
 	
 	private const long tickDelta = 50L;
 	private const int loadSize = 192 * 2;
@@ -18,7 +18,7 @@ public class MinecraftServer {
      */
 	private bool serverRunning = true;
 
-	protected void loadAllWorlds()
+	virtual protected void loadAllWorlds()
 	{
 		worldServers = new WorldServer[1];
 		worldServers [0] = new WorldServer ();
@@ -34,7 +34,7 @@ public class MinecraftServer {
 		int i1 = 0;
 		Debug.Log ("menu.generatingTerrain");
 		int j1 = 0;
-		Debug.Log ("Preparing start region for level {0}", j1);
+		Debug.Log ("Preparing start region for level {0}, j1");
 		WorldServer worldserver = this.worldServers [j1];
 		BlockPos blockPos = worldserver.getSpawnPoint ();
 		long k1 = getCurrentTimeMillis ();
@@ -44,7 +44,7 @@ public class MinecraftServer {
 				long j2 = getCurrentTimeMillis ();
 
 				if (j2 - k1 > 1000L) {
-					Debug.Log ("Preparing spawn area", i1 * 100 / ((loadSize / chunkSize) * (loadSize / chunkSize)));
+					Debug.Log ("Preparing spawn area {0}, i1 * 100 / ((loadSize / chunkSize) * (loadSize / chunkSize))");
 					k1 = j2;
 				}
 
@@ -89,7 +89,7 @@ public class MinecraftServer {
 	/**
      * Main function called by run() every loop.
      */
-	public void tick()
+	virtual public void tick()
 	{
 
 	}
@@ -98,7 +98,7 @@ public class MinecraftServer {
 	{
 		for (int i = 0; i < worldServers.Length; ++i) 
 		{
-			WorldServer worldServer = WorldServer [i];
+			WorldServer worldServer = worldServers [i];
 			worldServer.tick ();
 		}
 	}
@@ -112,4 +112,5 @@ public class MinecraftServer {
      * Initialises the server and starts it.
      */
 	protected abstract bool startServer ();
+
 }

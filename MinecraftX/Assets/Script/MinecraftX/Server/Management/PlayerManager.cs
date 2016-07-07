@@ -6,12 +6,18 @@ public class PlayerManager {
 	/**
      * Adds an EntityPlayerMP to the PlayerManager and to all player instances within player visibility
      */
-	public void addPlayer ();
+	public void addPlayer ()
+	{
+
+	}
 
 	/**
      * Removes an EntityPlayerMP from the PlayerManager.
      */
-	public void removePlayer ();
+	public void removePlayer ()
+	{
+
+	}
 
 	/**
      * update chunks around a player being moved by server logic (e.g. cart, boat)

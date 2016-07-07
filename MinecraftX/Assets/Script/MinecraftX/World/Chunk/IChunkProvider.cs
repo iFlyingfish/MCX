@@ -34,7 +34,7 @@ public interface IChunkProvider {
      * Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the
      * specified chunk from the map seed and chunk seed
      */
-	Chunk provideChunk(int x, int z);
+    Chunk provideChunk(int x, int z);
 
 	Chunk provideChunk(BlockPos blockPosIn);
 
@@ -66,18 +66,18 @@ public interface IChunkProvider {
      */
 	string makeString();
 
-	List<SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos);
+//	List<SpawnListEntry> getPossibleCreatures(EnumCreatureType creatureType, BlockPos pos);
 
-	BlockPos getStrongholdGen(World worldIn, string structureName, BlockPos position);
+//	BlockPos getStrongholdGen(World worldIn, string structureName, BlockPos position);
 
-	int getLoadedChunkCount();
+//	int getLoadedChunkCount();
 
 	void recreateStructures(Chunk p_180514_1_, int p_180514_2_, int p_180514_3_);
 
-	/**
-     * Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently
-     * unimplemented.
-     */
-	void saveExtraData();
+//	/**
+//     * Save extra data not associated with any Chunk.  Not saved during autosave, only during world unload.  Currently
+//     * unimplemented.
+//     */
+//	void saveExtraData();
 
 }
