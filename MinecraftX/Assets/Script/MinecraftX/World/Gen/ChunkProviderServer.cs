@@ -21,21 +21,13 @@ public class ChunkProviderServer : IChunkProvider {
 	}
 
 	/**
-     * Creates the chunk provider for this world. Called in the constructor. Retrieves provider from worldProvider?
-     */
-	protected IChunkProvider createChunkProvider()
-	{
-
-
-	}
-
-	/**
      * Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the
      * specified chunk from the map seed and chunk seed
      */
 	public Chunk provideChunk(int x, int z)
 	{
-
+		Chunk chunk = (Chunk)id2ChunkDic [ChunkCoordIntPair.chunkXZ2Int (x, z)];
+		return chunk == null ? loadChunk (x, z) : chunk;
 	}
 
 	/**
@@ -62,4 +54,105 @@ public class ChunkProviderServer : IChunkProvider {
 
 		return chunk;
 	}
+
+	private Chunk loadChunkFromFile(int x, int z)
+	{
+		return null;
+	}
+
+	/**
+     * Checks to see if a chunk exists at x, z
+     */
+	public bool chunkExists(int x, int z)
+	{
+		return id2ChunkDic.ContainsKey (ChunkCoordIntPair.chunkXZ2Int (x, z));
+	}
+
+	public Chunk provideChunk(BlockPos blockPosIn)
+	{
+		return this.provideChunk (blockPosIn.x >> 4, blockPosIn.y >> 4);
+	}
+
+	/**
+     * Populates chunk with ores etc etc
+     */
+	public void populate(IChunkProvider chunkProvider, int x, int z)
+	{
+		Chunk chunk = provideChunk (x, z);
+
+		if (serverChunkGenerator != null) {
+			serverChunkGenerator.populate (chunkProvider, x, z);
+		}
+	}
+
+	public bool func_177460_a(IChunkProvider chunkProvider, Chunk chunk, int x, int z)
+	{
+		if (serverChunkGenerator != null && serverChunkGenerator.func_177460_a (chunkProvider, chunk, x, z)) {
+			Chunk newChunk = provideChunk (x, z);
+			return true;
+		} else {
+			return false;
+		}
+	}
+
+	/**
+     * Two modes of operation: if passed true, save all Chunks in one go.  If passed false, save up to two chunks.
+     * Return true if all chunks have been saved.
+     */
+	public bool saveChunks(bool p_73151_1, IProgressUpdate progressCallback)
+	{
+		int i = 0;
+		for (int j = 0; j < loadedChunks.Count; ++j) {
+			Chunk chunk = loadedChunks [j];
+
+			if (p_73151_1) {
+				
+			}
+
+			savaChunkData (chunk);
+			++i;
+
+			if (i == 24 && !p_73151_1) {
+				return false;
+			}
+		}
+
+		return true;
+	}
+
+	private void savaChunkData(Chunk chunk)
+	{
+		
+	}
+
+	/**
+     * Unloads chunks that are marked to be unloaded. This is not guaranteed to unload every such chunk.
+     */
+	public bool unloadQueuedChunks()
+	{
+		return serverChunkGenerator.unloadQueuedChunks ();
+	}
+
+	/**
+     * Returns if the IChunkProvider supports saving.
+     */
+	public bool canSave()
+	{
+		return true;
+	}
+
+	/**
+     * Converts the instance data to a readable string.
+     */
+	public string makeString()
+	{
+		return "";
+	}
+
+	public void recreateStructures(Chunk chunk, int x, int z)
+	{
+	}
+
+
+
 }
