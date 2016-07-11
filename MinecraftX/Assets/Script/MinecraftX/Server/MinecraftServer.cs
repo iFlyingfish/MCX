@@ -2,12 +2,16 @@
 using System.Collections;
 using System;
 
+public class MinecraftConfig {
+
+	public static readonly long tickDelta = 50L;
+	public static readonly int loadSize= 192 * 2;
+	public static readonly int chunkSize = 16;
+	public static readonly int chunkBitSize = 4;
+
+}
+
 public abstract class MinecraftServer {
-	
-	private const long tickDelta = 50L;
-	private const int loadSize = 192 * 2;
-	private const int chunkSize = 16;
-	private const int chunkBitSize = 4;
 
 	private readonly System.Random random = new System.Random ();
 	private long currentTime = getCurrentTimeMillis();
@@ -39,8 +43,8 @@ public abstract class MinecraftServer {
 		BlockPos blockPos = worldserver.getSpawnPoint ();
 		long k1 = getCurrentTimeMillis ();
 
-		for (int x = -loadSize / 2; x < loadSize / 2; x += chunkSize) {
-			for (int z = -loadSize / 2; z < loadSize / 2; z += chunkSize) {
+		for (int x = -MinecraftConfig.loadSize / 2; x < MinecraftConfig.loadSize / 2; x += MinecraftConfig.chunkSize) {
+			for (int z = -MinecraftConfig.loadSize / 2; z < MinecraftConfig.loadSize / 2; z += MinecraftConfig.chunkSize) {
 				long j2 = getCurrentTimeMillis ();
 
 				if (j2 - k1 > 1000L) {
@@ -49,7 +53,7 @@ public abstract class MinecraftServer {
 				}
 
 				++i1;
-				worldserver.theChunkProviderServer.loadChunk (blockPos.x + x >> chunkBitSize, blockPos.z + z >> chunkBitSize);
+				worldserver.theChunkProviderServer.loadChunk (blockPos.x + x >> MinecraftConfig.chunkBitSize, blockPos.z + z >> MinecraftConfig.chunkBitSize);
 
 			}
 		}
@@ -72,8 +76,8 @@ public abstract class MinecraftServer {
 				totalTime += duration;
 				currentTime = realCurTime;
 
-				while (totalTime > tickDelta) {
-					totalTime -= tickDelta;
+				while (totalTime > MinecraftConfig.tickDelta) {
+					totalTime -= MinecraftConfig.tickDelta;
 					tick ();
 				}
 

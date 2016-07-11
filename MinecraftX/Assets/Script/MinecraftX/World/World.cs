@@ -26,7 +26,8 @@ public class World : IBlockAccess {
 
 	public IBlockState getBlockState(BlockPos pos)
 	{
-		
+		//Chunk chunk = getChunkFromBlockCoords (pos);
+	
 	}
 
 	/**

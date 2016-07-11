@@ -58,6 +58,7 @@
      <Compile Include="Assets\Script\MinecraftX\World\Chunk\Chunk.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Chunk\ChunkPrimer.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Chunk\Storage\ExtendBlockStorage.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\ChunkCoordIntPair.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderGenerate.cs" />
