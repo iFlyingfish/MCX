@@ -41,13 +41,5 @@ public class WorldServer : World {
 	{
 
 	}
-
-	/**
-     * Gets the spawn point in the world
-     */
-	public BlockPos getSpawnPoint()
-	{
-
-	}
 		
 }

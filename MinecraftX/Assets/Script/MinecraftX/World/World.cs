@@ -9,6 +9,17 @@ public class World : IBlockAccess {
 	/** Handles chunk operations and caching */
 	protected IChunkProvider chunkProvider;
 
+
+	/**
+     * holds information about a world (size on disk, time, spawn point, seed, ...)
+     */
+	protected WorldInfo worldInfo;
+
+	protected World()
+	{
+
+	}
+
 	protected World(WorldProvider providerIn)
 	{
 		provider = providerIn;
@@ -50,5 +61,16 @@ public class World : IBlockAccess {
 	public Chunk getChunkFromChunkCoords(int chunkX, int chunkZ)
 	{
 		return chunkProvider.provideChunk (chunkX, chunkZ);
+	}
+
+	/**
+     * Gets the spawn point in the world
+     */
+	public BlockPos getSpawnPoint()
+	{
+		BlockPos blockpos = new BlockPos (worldInfo.spawnX, worldInfo.spawnY, worldInfo.spawnZ);
+
+
+		return blockpos;
 	}
 }

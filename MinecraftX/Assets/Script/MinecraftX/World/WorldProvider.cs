@@ -25,7 +25,7 @@ public abstract class WorldProvider {
      */
 	public bool canCoordinateBeSpawn(int x, int z)
 	{
-		 
+		return true;
 	}
 
 	/**
@@ -33,6 +33,6 @@ public abstract class WorldProvider {
      */
 	public IChunkProvider createChunkGenerator()
 	{
-		return (IChunkProvider)(terrainType == WorldType.FLAT ? new ChunkProviderFlat(worldObj, 0, true, "") : (terrainType == WorldType.DEFAULT ? new ChunkProviderGenerate(worldObj, 0, true, "") : new ChunkProviderGenerate(worldObj, 0, true, "")));
+		return terrainType == WorldType.FLAT ? (IChunkProvider)(new ChunkProviderFlat(worldObj, 0, true, "")) : (terrainType == WorldType.DEFAULT ? (IChunkProvider)(new ChunkProviderGenerate(worldObj, 0, true, "")) : (IChunkProvider)(new ChunkProviderGenerate(worldObj, 0, true, "")));
 	}
 }
