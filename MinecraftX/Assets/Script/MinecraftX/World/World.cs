@@ -26,8 +26,8 @@ public class World : IBlockAccess {
 
 	public IBlockState getBlockState(BlockPos pos)
 	{
-		//Chunk chunk = getChunkFromBlockCoords (pos);
-	
+		Chunk chunk = getChunkFromBlockCoords (pos);
+		return chunk.getBlockState (pos);
 	}
 
 	/**
@@ -36,12 +36,12 @@ public class World : IBlockAccess {
      */
 	public bool isAirBlock(BlockPos pos)
 	{
-
+		return false;
 	}
 
 	public Chunk getChunkFromBlockCoords(BlockPos pos)
 	{
-
+		return getChunkFromChunkCoords (pos.x >> MinecraftConfig.chunkBitSize , pos.y >> MinecraftConfig.chunkBitSize);
 	}
 
 	/**
@@ -49,6 +49,6 @@ public class World : IBlockAccess {
      */
 	public Chunk getChunkFromChunkCoords(int chunkX, int chunkZ)
 	{
-
+		return chunkProvider.provideChunk (chunkX, chunkZ);
 	}
 }
