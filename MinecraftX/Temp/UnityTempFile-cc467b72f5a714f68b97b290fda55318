@@ -83,6 +83,7 @@
 'Assets/Script/MinecraftX/Block/Block.cs'
 'Assets/Script/MinecraftX/Block/BlockGrass.cs'
 'Assets/Script/MinecraftX/Init/Blocks.cs'
+'Assets/Script/MinecraftX/Launcher/Launcher.cs'
 'Assets/Script/MinecraftX/Server/Integrated/IntegratedServer.cs'
 'Assets/Script/MinecraftX/Server/Management/PlayerManager.cs'
 'Assets/Script/MinecraftX/Server/MinecraftServer.cs'

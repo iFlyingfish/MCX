@@ -3,7 +3,17 @@ using System.Collections;
 
 public class IntegratedServer : MinecraftServer {
 
-	public WorldServer[] worldServers;
+	private static IntegratedServer instance; 
+
+	public static IntegratedServer getInstance()
+	{
+		if (instance == null) {
+			instance = new IntegratedServer ();
+		}
+
+		return instance;
+
+	}
 
 	/**
      * Initialises the server and starts it.
@@ -18,12 +28,18 @@ public class IntegratedServer : MinecraftServer {
 	{
 		worldServers = new WorldServer[1];
 		worldServers [0] = new WorldServer ();
+		WorldServer worldServer = worldServers [0];
 		initialWorldChunkLoad ();
 	}
 
 	public void updateTimeLightAndEntities()
 	{
 
+	}
+
+	public void run()
+	{
+		startServer ();
 	}
 
 	/**

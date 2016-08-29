@@ -14,7 +14,7 @@ public class MinecraftConfig {
 public abstract class MinecraftServer {
 
 	private readonly System.Random random = new System.Random ();
-	private long currentTime = getCurrentTimeMillis();
+    long currentTime = getCurrentTimeMillis();
 	/** The server world instances. */
 	public WorldServer[] worldServers;
 	/**
@@ -36,10 +36,11 @@ public abstract class MinecraftServer {
 		int k = 192;
 		int l = 625;
 		int i1 = 0;
-		Debug.Log ("menu.generatingTerrain");
+		//Debug.Log ("menu.generatingTerrain");
 		int j1 = 0;
-		Debug.Log ("Preparing start region for level {0}, j1");
-		WorldServer worldserver = this.worldServers [j1];
+		//Debug.Log ("Preparing start region for level {0}, j1");
+
+		WorldServer worldserver = worldServers[j1];
 		BlockPos blockPos = worldserver.getSpawnPoint ();
 		long k1 = getCurrentTimeMillis ();
 

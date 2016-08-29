@@ -5,7 +5,7 @@ public abstract class WorldProvider {
 
 	/** world object being used */
 	protected World worldObj;
-	private WorldType terrainType; 
+	private WorldType terrainType = WorldType.DEFAULT; 
     
 	/** world chunk manager being used to generate chunks */
 	protected WorldChunkManager worldChunkMgr;

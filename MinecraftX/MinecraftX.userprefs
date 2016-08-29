@@ -1,38 +1,28 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/MinecraftX/Server/MinecraftServer.cs">
     <Files>
-      <File FileName="Assets\Script\MinecraftX\World\Chunk\Chunk.cs" Line="39" Column="36" />
-      <File FileName="Assets\Script\MinecraftX\World\World.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderServer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderGenerate.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\WorldProviderSurface.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\Server\Management\PlayerManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Biome\WorldChunkManager.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\MapGenBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Chunk\ChunkPrimer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\Structure\MapGenStructure.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\WorldProvider.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\Init\Blocks.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\Block\Block.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\Block\BlockGrass.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\Util\BlockPos.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\WorldType.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs" Line="21" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Biome\BiomeGenBase.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\Structure\MapGenVillage.cs" Line="1" Column="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Chunk\Storage\ExtendBlockStorage.cs" Line="11" Column="74" />
-      <File FileName="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" Line="329" Column="1" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\Server\Integrated\IntegratedServer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\World\WorldServer.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\World\ChunkCoordIntPair.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\World\IBlockAccess.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\World\Chunk\IChunkProvider.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets\Script\MinecraftX\Server\MinecraftServer.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/World.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/Server/MinecraftServer.cs" Line="42" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Chunk/Chunk.cs" Line="44" Column="36" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/ChunkProviderFlat.cs" Line="37" Column="2" />
+      <File FileName="Assets/Script/MinecraftX/World/WorldProvider.cs" Line="36" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/WorldProviderSurface.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/ChunkProviderGenerate.cs" Line="6" Column="2" />
+      <File FileName="Assets/Script/MinecraftX/World/WorldServer.cs" Line="4" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/Util/BlockPos.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Storage/WorldInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/Init/Blocks.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Border/WorldBorder.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/Server/Integrated/IntegratedServer.cs" Line="33" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/Launcher/Launcher.cs" Line="8" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/leo/Documents/ProjectX/X/MCX/MinecraftX/Assets/Script/MinecraftX/Server/MinecraftServer.cs" line="42" column="41" />
+      <Breakpoint file="/Users/leo/Documents/ProjectX/X/MCX/MinecraftX/Assets/Script/MinecraftX/Server/MinecraftServer.cs" line="43" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

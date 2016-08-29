@@ -48,6 +48,7 @@
      <Compile Include="Assets\Script\MinecraftX\Block\Block.cs" />
      <Compile Include="Assets\Script\MinecraftX\Block\BlockGrass.cs" />
      <Compile Include="Assets\Script\MinecraftX\Init\Blocks.cs" />
+     <Compile Include="Assets\Script\MinecraftX\Launcher\Launcher.cs" />
      <Compile Include="Assets\Script\MinecraftX\Server\Integrated\IntegratedServer.cs" />
      <Compile Include="Assets\Script\MinecraftX\Server\Management\PlayerManager.cs" />
      <Compile Include="Assets\Script\MinecraftX\Server\MinecraftServer.cs" />
