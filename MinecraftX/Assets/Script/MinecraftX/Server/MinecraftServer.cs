@@ -24,8 +24,11 @@ public abstract class MinecraftServer {
 
 	virtual protected void loadAllWorlds()
 	{
+		WorldInfo worldInfo = new WorldInfo (0, 0, 0);
+
 		worldServers = new WorldServer[1];
-		worldServers [0] = new WorldServer ();
+		worldServers [0] = new WorldServer (worldInfo);
+
 		initialWorldChunkLoad ();
 	}
 
@@ -41,7 +44,8 @@ public abstract class MinecraftServer {
 		//Debug.Log ("Preparing start region for level {0}, j1");
 
 		WorldServer worldserver = worldServers[j1];
-		BlockPos blockPos = worldserver.getSpawnPoint ();
+        BlockPos blockPos = worldserver.getSpawnPoint ();
+
 		long k1 = getCurrentTimeMillis ();
 
 		for (int x = -MinecraftConfig.loadSize / 2; x < MinecraftConfig.loadSize / 2; x += MinecraftConfig.chunkSize) {

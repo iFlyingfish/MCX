@@ -12,6 +12,15 @@ public class WorldInfo : World {
 
 	}
 
+	//temp
+	public WorldInfo(int spawnX, int spawnY, int spawnZ)
+	{
+		_spawnX = spawnX;
+		_spawnY = spawnY;
+		_spawnZ = spawnZ;
+	}
+	//
+
 	public int spawnX
 	{
 		get { return _spawnX; }

@@ -5,7 +5,7 @@ public class WorldServer : World {
 
 	public ChunkProviderServer theChunkProviderServer;
 
-	public WorldServer() : base(WorldProvider.getProviderForDimension ())
+	public WorldServer(WorldInfo info) : base(info, WorldProvider.getProviderForDimension ())
 	{
 		chunkProvider = createChunkProvider ();
 	}

@@ -9,26 +9,26 @@ public class BlockPos {
 
 	public int x
 	{
-		get {return x;}
+		get {return _x;}
 		set {_x = value;}
 	}
 
 	public int y
 	{
-		get {return y;}
+		get {return _y;}
 		set {_y = value;}
 	}
 
 	public int z
 	{
-		get {return z;}
+		get {return _z;}
 		set {_z = value;}
 	}
 
 	public BlockPos(int x, int y, int z)
 	{
-		this._x = x;
-		this._y = y;
-		this._z = z;
+		_x = x;
+		_y = y;
+		_z = z;
 	}
 }

@@ -26,8 +26,10 @@ public class IntegratedServer : MinecraftServer {
 
 	override protected void loadAllWorlds()
 	{
+		WorldInfo worldInfo = new WorldInfo (0, 0, 0);
+
 		worldServers = new WorldServer[1];
-		worldServers [0] = new WorldServer ();
+		worldServers [0] = new WorldServer (worldInfo);
 		WorldServer worldServer = worldServers [0];
 		initialWorldChunkLoad ();
 	}

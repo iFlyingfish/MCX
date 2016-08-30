@@ -20,8 +20,9 @@ public class World : IBlockAccess {
 
 	}
 
-	protected World(WorldProvider providerIn)
+	protected World(WorldInfo info, WorldProvider providerIn)
 	{
+		worldInfo = info;
 		provider = providerIn;
 	}
 
@@ -72,5 +73,7 @@ public class World : IBlockAccess {
 
 
 		return blockpos;
+
+
 	}
 }
