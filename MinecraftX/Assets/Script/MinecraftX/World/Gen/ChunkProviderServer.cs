@@ -36,21 +36,23 @@ public class ChunkProviderServer : IChunkProvider {
 	public Chunk loadChunk(int x, int z)
 	{
 		long chunkID = ChunkCoordIntPair.chunkXZ2Int (x, z);
-		Chunk chunk = (Chunk)id2ChunkDic [chunkID];
+		Chunk chunk = null;
 
-		if (chunk == null) {
+		if (!id2ChunkDic.ContainsKey(chunkID)) {
 
 			if (serverChunkGenerator == null) {
 
 			} else {
 				chunk = serverChunkGenerator.provideChunk (x, z);
 			}
+
+			id2ChunkDic.Add (chunkID, chunk);
+			loadedChunks.Add (chunk);
+			chunk.onChunkLoad ();
+			chunk.populateChunk (this, this, x, z);
 		}
 
-		id2ChunkDic.Add (chunkID, chunk);
-		loadedChunks.Add (chunk);
-		chunk.onChunkLoad ();
-		chunk.populateChunk (this, this, x, z);
+		chunk = (Chunk)id2ChunkDic [chunkID];
 
 		return chunk;
 	}
