@@ -2,8 +2,10 @@
 using System.Collections;
 
 public class ChunkPrimer {
+	
 	private readonly short[] data = new short[65536];
-	private readonly IBlockState defaultState = Blocks.air.getDefaultState ();
+	private readonly IBlockState defaultState = Blocks.air.getDefaultState();
+//	private readonly IBlockState defaultState;
 
 	public IBlockState getBlockState(int x, int y, int z)
 	{

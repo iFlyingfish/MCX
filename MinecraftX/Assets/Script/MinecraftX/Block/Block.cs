@@ -9,6 +9,6 @@ public class Block {
 
 	public IBlockState getDefaultState()
 	{
-		return this.defaultBlockState;
+		return defaultBlockState;
 	}
 }
