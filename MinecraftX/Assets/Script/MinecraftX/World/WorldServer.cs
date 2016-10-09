@@ -7,6 +7,7 @@ public class WorldServer : World {
 
 	public WorldServer(WorldInfo info) : base(info, WorldProvider.getProviderForDimension ())
 	{
+		provider.registerWorld (this);
 		chunkProvider = createChunkProvider ();
 	}
 

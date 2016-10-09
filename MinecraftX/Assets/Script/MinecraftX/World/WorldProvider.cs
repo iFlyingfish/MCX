@@ -5,10 +5,27 @@ public abstract class WorldProvider {
 
 	/** world object being used */
 	protected World worldObj;
-	private WorldType terrainType = WorldType.DEFAULT; 
-    
+	private WorldType terrainType = WorldType.DEFAULT;
+
 	/** world chunk manager being used to generate chunks */
 	protected WorldChunkManager worldChunkMgr;
+
+	/**
+     * associate an existing world with a World provider, and setup its lightbrightness table
+     */
+	public void registerWorld(World worldIn)
+	{
+		worldObj = worldIn;
+		registerWorldChunkManager ();
+	}
+
+	/**
+     * creates a new world chunk manager for WorldProvider
+     */
+	protected void registerWorldChunkManager()
+	{
+		worldChunkMgr = new WorldChunkManager (worldObj);
+	}
 
 	public static WorldProvider getProviderForDimension()
 	{

@@ -53,7 +53,7 @@ public abstract class MinecraftServer {
 				long j2 = getCurrentTimeMillis ();
 
 				if (j2 - k1 > 1000L) {
-					Debug.Log ("Preparing spawn area {0}, i1 * 100 / ((loadSize / chunkSize) * (loadSize / chunkSize))");
+					Debug.LogFormat ("Preparing spawn area {0}", i1 * 100 / ((MinecraftConfig.loadSize / MinecraftConfig.chunkSize) * (MinecraftConfig.loadSize / MinecraftConfig.chunkSize)));
 					k1 = j2;
 				}
 

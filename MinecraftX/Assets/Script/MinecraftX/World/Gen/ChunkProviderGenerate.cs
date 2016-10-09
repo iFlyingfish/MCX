@@ -6,6 +6,9 @@ public class ChunkProviderGenerate : IChunkProvider {
 	private readonly double[] field_147434_q;
 	private World worldObj;
 
+	/** The biomes that are used to generate the chunk */
+	private BiomeGenBase[] biomesForGeneration;
+
 	public ChunkProviderGenerate(World worldIn, int seed, bool generateStructures, string generatorSettings)
 	{
 		worldObj = worldIn;
@@ -87,8 +90,14 @@ public class ChunkProviderGenerate : IChunkProvider {
 	{
 		ChunkPrimer chunkprimer = new ChunkPrimer ();
 		setBlocksInChunk (x, z, chunkprimer);
+		biomesForGeneration = worldObj.getWorldChunkManager ().loadBlockGeneratorData (biomesForGeneration, x * MinecraftConfig.chunkSize, z * MinecraftConfig.chunkSize, MinecraftConfig.chunkSize, MinecraftConfig.chunkSize);
 
 		Chunk chunk = new Chunk (worldObj, chunkprimer, x, z);
+		byte[] abyte = chunk.getBiomeArray ();
+//		for (int i = 0; i < abyte.Length; ++i) {
+//			abyte [i] = (byte)biomesForGeneration [i].biomeID;
+//		}
+
 		return chunk;
 	}
 

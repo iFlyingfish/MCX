@@ -9,9 +9,14 @@ public class Chunk {
      */
 	private readonly ExtendBlockStorage[] storageArrays;
 
+	/**
+     * Contains a 16x16 mapping on the X/Z plane of the biome ID to which each colum belongs.
+     */
+	private readonly byte[] blockBiomeArray;
+
 	public Chunk(World worldIn, ChunkPrimer primer, int x, int z)
     {
-      
+		blockBiomeArray = new byte[MinecraftConfig.chunkSize * MinecraftConfig.chunkSize];
     }
 
 	/**
@@ -42,5 +47,28 @@ public class Chunk {
 		}
 
 		return Blocks.air.getDefaultState ();
+	}
+
+	/**
+     * Returns an array containing a 16x16 mapping on the X/Z of block positions in this Chunk to biome IDs.
+     */
+	public byte[] getBiomeArray()
+	{
+		return blockBiomeArray;
+	}
+
+	/**
+     * Accepts a 256-entry array that contains a 16x16 mapping on the X/Z plane of block positions in this Chunk to
+     * biome IDs.
+     */
+	public void setBiomeArray(byte[] biomeArray)
+	{
+		if (blockBiomeArray.Length != biomeArray.Length) {
+			Debug.LogErrorFormat ("Could not set level chunk biomes, array length is {0} instead of {1}", biomeArray.Length, blockBiomeArray.Length);
+		} else {
+			for (int i = 0; i < blockBiomeArray.Length; ++i) {
+				blockBiomeArray [i] = biomeArray [i];
+			}
+		}
 	}
 }

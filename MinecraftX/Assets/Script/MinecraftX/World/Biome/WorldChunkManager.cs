@@ -3,6 +3,11 @@ using System.Collections;
 
 public class WorldChunkManager {
 
+	public WorldChunkManager(World worldIn) : base()
+	{
+		//to be implemented
+	}
+
 	/**
      * Returns biomes to use for the blocks and loads the other data like temperature and humidity onto the
      * WorldChunkManager Args: oldBiomeList, x, z, width, depth
