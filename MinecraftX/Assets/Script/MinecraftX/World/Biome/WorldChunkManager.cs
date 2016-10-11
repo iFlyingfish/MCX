@@ -3,9 +3,19 @@ using System.Collections;
 
 public class WorldChunkManager {
 
-	public WorldChunkManager(World worldIn) : base()
+	protected WorldChunkManager()
 	{
-		//to be implemented
+
+	}
+
+	public WorldChunkManager(long seed, WorldType worldType, string p_i45744_4_) : this()
+	{
+		//to be implemented the POINT!
+	}
+
+	public WorldChunkManager (World worldIn) : this (worldIn.getSeed (), worldIn.getWorldInfo ().getTerrainType (), worldIn.getWorldInfo ().getGeneratorOptions ())
+	{
+		
 	}
 
 	/**

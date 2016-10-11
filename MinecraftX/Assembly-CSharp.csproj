@@ -65,6 +65,7 @@
      <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderFlat.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderGenerate.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\ChunkProviderServer.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Gen\Layer\GenLayer.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\MapGenBase.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\Structure\MapGenStructure.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Gen\Structure\MapGenVillage.cs" />

@@ -103,6 +103,7 @@
 'Assets/Script/MinecraftX/World/Gen/ChunkProviderFlat.cs'
 'Assets/Script/MinecraftX/World/Gen/ChunkProviderGenerate.cs'
 'Assets/Script/MinecraftX/World/Gen/ChunkProviderServer.cs'
+'Assets/Script/MinecraftX/World/Gen/Layer/GenLayer.cs'
 'Assets/Script/MinecraftX/World/Gen/MapGenBase.cs'
 'Assets/Script/MinecraftX/World/Gen/Structure/MapGenStructure.cs'
 'Assets/Script/MinecraftX/World/Gen/Structure/MapGenVillage.cs'

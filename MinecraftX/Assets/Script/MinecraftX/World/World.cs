@@ -76,4 +76,12 @@ public class World : IBlockAccess {
 
 
 	}
+
+	/**
+     * Returns the world's WorldInfo object
+     */
+	public WorldInfo getWorldInfo()
+	{
+		return worldInfo;
+	}
 }
