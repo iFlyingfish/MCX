@@ -1,30 +1,36 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerZoom.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerBiomeEdge.cs">
     <Files>
-      <File FileName="Assets/Script/MinecraftX/World/Gen/ChunkProviderGenerate.cs" Line="99" Column="6" />
-      <File FileName="Assets/Script/MinecraftX/World/Chunk/ChunkPrimer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Gen/ChunkProviderServer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/Server/MinecraftServer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/Block/Block.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/Init/Blocks.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/WorldProviderSurface.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/WorldProvider.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/Launcher/Launcher.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/Server/Integrated/IntegratedServer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/WorldServer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Chunk/IChunkProvider.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/WorldType.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Chunk/Chunk.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenBase.cs" Line="1" Column="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Biome/WorldChunkManager.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/World.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Storage/WorldInfo.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayer.cs" Line="74" Column="18" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerVoronoZoom.cs" Line="1" Column="1" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerIsLand.cs" Line="36" Column="3" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/IntCache.cs" Line="44" Column="4" NotebookId="1" />
-      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerZoom.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenSnow.cs" Line="8" Column="3" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayer.cs" Line="97" Column="22" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenMesa.cs" Line="8" Column="3" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerBiome.cs" Line="23" Column="113" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerBiomeEdge.cs" Line="5" Column="2" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerRiver.cs" Line="4" Column="38" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerShore.cs" Line="7" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerDeepOcean.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerEdge.cs" Line="31" Column="11" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerFuzzyZoom.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerHills.cs" Line="6" Column="2" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerIsLand.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerRareBiome.cs" Line="4" Column="42" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerRemoveTooMuchOcean.cs" Line="44" Column="3" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerRiverInit.cs" Line="7" Column="3" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerRiverMix.cs" Line="5" Column="2" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerSmooth.cs" Line="4" Column="39" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerVoronoiZoom.cs" Line="4" Column="45" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerZoom.cs" Line="72" Column="2" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/IntCache.cs" Line="1" Column="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenBase.cs" Line="26" Column="47" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/ChunkProviderSettings.cs" Line="6" Column="33" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerAddMushroomIsLand.cs" Line="37" Column="72" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenForest.cs" Line="8" Column="1" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenHills.cs" Line="6" Column="47" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenTaiga.cs" Line="11" Column="1" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerAddIsLand.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Biome/BiomeGenJungle.cs" Line="8" Column="3" NotebookId="1" />
+      <File FileName="Assets/Script/MinecraftX/World/Gen/Layer/GenLayerAddSnow.cs" Line="22" Column="62" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

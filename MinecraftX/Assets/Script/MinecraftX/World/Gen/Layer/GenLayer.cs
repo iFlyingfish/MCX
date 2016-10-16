@@ -90,6 +90,14 @@ public abstract class GenLayer {
 	}
 
 	/**
+     * returns true if the biomeId is one of the various ocean biomes.
+     */
+	protected static bool isBiomeOceanic(int p_151618_0_)
+	{
+		return p_151618_0_  == BiomeGenBase.deepOcean.biomeID; // not added ocean and frozen ocean yet
+	}
+
+	/**
      * selects a random integer from a set of provided integers
      */
 	protected int selectRandom(params int[] p_151619_1_)
