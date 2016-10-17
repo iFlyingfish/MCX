@@ -34,7 +34,22 @@ public abstract class GenLayer {
      * amounts, or biomeList[] indices based on the particular GenLayer subclass.
      */
 	public abstract int[] getInts(int areaX, int areaY, int areaWidth, int areaHeight);
+
+	protected static bool biomesEqualOrMesaPlateau(int biomeIDA, int biomeIDB)
+	{
 		
+		if (biomeIDA == biomeIDB) {
+			return true;
+		} else if (biomeIDA != BiomeGenBase.mesaPlateau_F.biomeID && biomeIDA != BiomeGenBase.mesaPlateau.biomeID) {
+			const BiomeGenBase biomegenbase = BiomeGenBase.getBiome (biomeIDA);
+			const BiomeGenBase biomegenbase1 = BiomeGenBase.getBiome (biomeIDB);
+		
+			return (biomegenbase != null && biomegenbase1 != null) ? biomegenbase.isEqualTo (biomegenbase1) : false;
+		} else {
+			return biomeIDB == BiomeGenBase.mesaPlateau_F.biomeID || biomeIDB == BiomeGenBase.mesaPlateau.biomeID; 
+		}
+	}
+
 	/**
      * Initialize layer's local worldGenSeed based on its own baseSeed and the world's global seed (passed in as an
      * argument).
