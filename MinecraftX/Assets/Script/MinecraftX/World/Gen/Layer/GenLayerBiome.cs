@@ -14,7 +14,7 @@ public class GenLayerBiome : GenLayer{
 		BiomeGenBase.swampland
 	};
 
-	private BiomeGenBase[] field_151622_e = new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.extremeHills, BiomeGenBase.tagia, BiomeGenBase.plains};
+	private BiomeGenBase[] field_151622_e = new BiomeGenBase[] {BiomeGenBase.forest, BiomeGenBase.extremeHills, BiomeGenBase.taiga, BiomeGenBase.plains};
 
 	private BiomeGenBase[] field_151620_f = new BiomeGenBase[] {BiomeGenBase.icePlains, BiomeGenBase.icePlains, BiomeGenBase.icePlains, BiomeGenBase.coldTaiga};
 

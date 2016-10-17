@@ -41,8 +41,8 @@ public abstract class GenLayer {
 		if (biomeIDA == biomeIDB) {
 			return true;
 		} else if (biomeIDA != BiomeGenBase.mesaPlateau_F.biomeID && biomeIDA != BiomeGenBase.mesaPlateau.biomeID) {
-			const BiomeGenBase biomegenbase = BiomeGenBase.getBiome (biomeIDA);
-			const BiomeGenBase biomegenbase1 = BiomeGenBase.getBiome (biomeIDB);
+			 BiomeGenBase biomegenbase = BiomeGenBase.getBiome (biomeIDA);
+			 BiomeGenBase biomegenbase1 = BiomeGenBase.getBiome (biomeIDB);
 		
 			return (biomegenbase != null && biomegenbase1 != null) ? biomegenbase.isEqualTo (biomegenbase1) : false;
 		} else {

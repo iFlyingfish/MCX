@@ -55,6 +55,7 @@
      <Compile Include="Assets\Script\MinecraftX\Util\BlockPos.cs" />
      <Compile Include="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenBase.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenBeach.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenDesert.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenForest.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenHills.cs" />
@@ -63,8 +64,10 @@
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenMushroomIsland.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenOcean.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenPlains.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenRiver.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenSavana.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenSnow.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenStoneBeach.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenSwamp.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenTaiga.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\WorldChunkManager.cs" />
