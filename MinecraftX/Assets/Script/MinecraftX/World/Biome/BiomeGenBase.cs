@@ -67,15 +67,20 @@ public class BiomeGenBase {
 	public static readonly BiomeGenBase mesa = new BiomeGenMesa (37, false, false);
 	public static readonly BiomeGenBase mesaPlateau_F = new BiomeGenMesa (38, false, true);
 	public static readonly BiomeGenBase mesaPlateau = new BiomeGenMesa (39, false, false);
+	public static readonly BiomeGenBase field_180279_ad = ocean;
 
 	/** The temperature of this biome. */
 	public float temperature;
+
+	/** The rainfall in this biome. */
+	public float rainfall;
 
 	/** Set to true if snow is enabled for this biome. */
 	protected bool enableSnow;
 
 	protected BiomeGenBase(int id)
 	{
+		rainfall = 0.5F;
 		biomeID = id;
 		biomeList[id] = this;
 	}
@@ -117,5 +122,13 @@ public class BiomeGenBase {
 	{
 		return enableSnow;
 	}
-		
+
+
+	/**
+     * Gets an integer representation of this biome's rainfall
+     */
+	public  int getIntRainfall()
+	{
+		return (int)(rainfall * 65536.0F);
+	}
 }

@@ -26,7 +26,7 @@ public class IntCache : MonoBehaviour {
 				return aint3;
 			}
 		} else if (area > intCacheSize) {
-			intCacheSize = CACHE_SIZE;
+			intCacheSize = area;
 			freeLargeArrays.Clear ();
 			inUseLargeArrays.Clear ();
 			int[] aint2 = new int[intCacheSize];
@@ -42,5 +42,30 @@ public class IntCache : MonoBehaviour {
 			inUseLargeArrays.Add (aint);
 			return aint;
 		}
+	}
+
+	/**
+     * Mark all pre-allocated arrays as available for re-use by moving them to the appropriate free lists.
+     */
+	public static void resetIntCache()  //need to be synchronized method
+	{
+		if (freeLargeArrays.Count != 0)
+		{
+			freeLargeArrays.RemoveAt(freeLargeArrays.Count - 1);
+		}
+
+		if (freeSmallArrays.Count != 0)
+		{
+			freeSmallArrays.RemoveAt(freeSmallArrays.Count - 1);
+		}
+
+		for (int i = 0; i < inUseLargeArrays.Count; ++i) {
+			freeLargeArrays.Add (inUseLargeArrays [i]);
+		}
+		for (int i = 0; i < inUseSmallArrays.Count; ++i) {
+			freeSmallArrays.Add (inUseSmallArrays [i]);
+		}
+		inUseLargeArrays.Clear ();
+		inUseSmallArrays.Clear ();
 	}
 }

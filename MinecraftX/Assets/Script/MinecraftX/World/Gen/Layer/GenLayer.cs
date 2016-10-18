@@ -18,6 +18,66 @@ public abstract class GenLayer {
 	/** base seed to the LCG prng provided via the constructor */
 	protected long baseSeed;
 
+	public static GenLayer[] initializeAllBiomeGenerators(long baseSeed, WorldType worldType, string worldGeneratorOptions)
+	{
+		GenLayer genLayer = new GenLayerIsLand (1L);
+		genLayer = new GenLayerFuzzyZoom (2000L, genLayer);
+		GenLayerAddIsLand genLayerAddIsLand = new GenLayerAddIsLand (2001L, genLayer);
+		GenLayerZoom genLayerZoom = new GenLayerZoom (2001L, genLayerAddIsLand);
+		GenLayerAddIsLand genLayerAddIsLand1 = new GenLayerAddIsLand(2L, genLayerZoom); 
+		genLayerAddIsLand1 = new GenLayerAddIsLand (50L, genLayerAddIsLand1);
+		genLayerAddIsLand1 = new GenLayerAddIsLand (50L, genLayerAddIsLand1);
+		GenLayerRemoveTooMuchOcean genLayerRoomTooMuchOcean = new GenLayerRemoveTooMuchOcean (2L, genLayerAddIsLand1);
+		GenLayerAddSnow genLayerAddSnow = new GenLayerAddSnow (2L, genLayerRoomTooMuchOcean);
+		GenLayerAddIsLand genlayerAddIsLand2 = new GenLayerAddIsLand (3L, genLayerAddSnow);
+		GenLayerEdge genLayerEdge = new GenLayerEdge (2L, genlayerAddIsLand2, GenLayerEdge.Mode.COOL_WARM);
+		genLayerEdge = new GenLayerEdge (2L, genLayerEdge, GenLayerEdge.Mode.HEAT_ICE);
+		genLayerEdge = new GenLayerEdge (3L, genLayerEdge, GenLayerEdge.Mode.SPECIAL);
+		GenLayerZoom genLayerZoom1 = new GenLayerZoom (2002L, genLayerEdge);
+		genLayerZoom1 = new GenLayerZoom (2003L, genLayerEdge);
+		GenLayerAddIsLand genLayerAddIsLand3 = new GenLayerAddIsLand (4L, genLayerZoom1);
+		GenLayerAddMushroomIsLand genLayerAdddMushroomIsLand = new GenLayerAddMushroomIsLand (5L, genLayerAddIsLand3);
+		GenLayerDeepOcean genLayerDeepOcean = new GenLayerDeepOcean (4L, genLayerAdddMushroomIsLand);
+		GenLayer genLayer4 = GenLayerZoom.magnify (1000L, genLayerDeepOcean, 0);
+		ChunkProviderSettings chunkprovidersettings = null;
+		int i = 4;
+		int j = i;
+
+		GenLayer genLayer5 = GenLayerZoom.magnify (1000L, genLayer4, 0);
+		GenLayerRiverInit genLayerRiverInit = new GenLayerRiverInit (100L, genLayer5);
+		GenLayerBiome genLayerBiome = new GenLayerBiome (200L, genLayer4, worldType, worldGeneratorOptions);
+		GenLayer genLayer6 = GenLayerZoom.magnify (1000L, genLayerBiome, 2);
+		GenLayerBiomeEdge genLayerBiomeEdge = new GenLayerBiomeEdge (1000L, genLayer6);
+		GenLayer genLayer7 = GenLayerZoom.magnify (1000L, genLayerRiverInit, 2);
+		GenLayer genLayerHills = new GenLayerHills (1000L, genLayerBiomeEdge, genLayer7);
+		GenLayer genLayer8 = GenLayerZoom.magnify (1000L, genLayerRiverInit, 2);
+		genLayer8 = GenLayerZoom.magnify (1000L, genLayer8, j);
+		GenLayerRiver genLayerRiver = new GenLayerRiver (1L, genLayer8);
+		GenLayerSmooth genlayerSmooth = new GenLayerSmooth (1000L, genLayerRiver);
+		genLayerHills = new GenLayerRareBiome (1001L, genLayerHills);
+
+		for (int k = 0; k < i; ++k) {
+
+			genLayerHills = new GenLayerZoom ((long)(1000 + k), genLayerHills);
+
+			if (k == 0) {
+				genLayerHills = new GenLayerAddIsLand (3L, genLayerHills);
+			}
+
+			if (k == 1 || i == 1) {
+				genLayerHills = new GenLayerShore (1000L, genLayerHills);
+			}
+		}
+
+		GenLayerSmooth genLayerSmooth1 = new GenLayerSmooth (1000L, genLayerHills);
+		GenLayerRiverMix genLayerRiverMix = new GenLayerRiverMix (100L, genLayerSmooth1, genlayerSmooth);
+		GenLayer genLayer3 = new GenLayerVoronoZoom (10L, genLayerRiverMix);
+		genLayerRiverMix.initWorldGenSeed (baseSeed);
+		genLayer3.initWorldGenSeed (baseSeed);
+		return new GenLayer[] { genLayerRiverMix, genLayer3, genLayerRiverMix };
+
+	}
+
 	public GenLayer(long seed)
 	{
 		baseSeed = seed;

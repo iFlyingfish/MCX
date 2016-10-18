@@ -54,6 +54,7 @@
      <Compile Include="Assets\Script\MinecraftX\Server\MinecraftServer.cs" />
      <Compile Include="Assets\Script\MinecraftX\Util\BlockPos.cs" />
      <Compile Include="Assets\Script\MinecraftX\Util\ObjectIntIdentityMap.cs" />
+     <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeCache.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenBase.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenBeach.cs" />
      <Compile Include="Assets\Script\MinecraftX\World\Biome\BiomeGenDesert.cs" />

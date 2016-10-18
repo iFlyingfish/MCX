@@ -94,9 +94,9 @@ public class ChunkProviderGenerate : IChunkProvider {
 
 		Chunk chunk = new Chunk (worldObj, chunkprimer, x, z);
 		byte[] abyte = chunk.getBiomeArray ();
-//		for (int i = 0; i < abyte.Length; ++i) {
-//			abyte [i] = (byte)biomesForGeneration [i].biomeID;
-//		}
+		for (int i = 0; i < abyte.Length; ++i) {
+			abyte [i] = (byte)biomesForGeneration [i].biomeID;
+		}
 
 		return chunk;
 	}
